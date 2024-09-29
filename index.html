@@ -13,16 +13,25 @@
 
     <div class="container">
         <h1>Meme Generator</h1>
-        <label for="">Select a Tamplate:</label>
-        <select id="tamplateSelect">
-            <option value="">Random Meme</option>
-        </select>
-        <button>Generate Meme</button>
+        <div class="tamplate-container">
+
+            <label for="tamplateSelect">Select a Tamplate:</label>
+            <select id="tamplateSelect">
+                <option value="">Random Meme</option>
+            </select>
+        </div>
+        <div class="input-div">
+            <input class="topText" type="text" placeholder="Top text"></input>
+            <input class="bottamText" type="text" placeholder="Bottom Text"></input>
+        </div>
+        <button id="generateBtn">Generate Meme</button>
         <div class="meme-canvas">
             <canvas id="memeCanvas"></canvas>
         </div>
+        <button id="download-btn">Download Meme</button>
     </div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

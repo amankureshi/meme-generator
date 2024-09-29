@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.input-div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 11rem;
+    gap: 1rem;
+    padding: 5px;
+}
+
+.input-div input {
+    padding: 3px;
+}
+
+.meme-canvas #memeCanvas {
+    border: 2px solid black;
+    border-radius: 10px;
+    max-width: 20rem;
+    min-height: 20rem;
+}
+
+.tamplate-container {
+    display: flex;
+}
