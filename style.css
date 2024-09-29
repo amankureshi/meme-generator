@@ -26,8 +26,7 @@ body {
 }
 
 .meme-canvas #memeCanvas {
-    border: 2px solid black;
-    border-radius: 10px;
+    border: 2px double black;
     max-width: 20rem;
     min-height: 20rem;
 }
