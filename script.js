@@ -5,7 +5,7 @@ const bottomTextInput = document.getElementById("bottomText");
 const generateButton = document.getElementById("generateBtn");
 const downloadBtn = document.getElementById("download-btn");
 const templateSelect = document.getElementById("tamplateSelect");
-
+let img = null;
 window.onload = () => {
   fetchMemeTamplate();
 };
@@ -31,6 +31,9 @@ function populateTemplateSelect(memes) {
 function generateMeme() {
   const selectedTemplateUrl = templateSelect.value;
   if (selectedTemplateUrl) {
+    // img = new Image(); // Changed: img defined globally
+    // img.src = selectedTemplateUrl;
+    // img.crossOrigin = "anonymous";
     drawMemeFromUrl(selectedTemplateUrl);
   } else {
     const apiUrl = "https://meme-api.com/gimme";
@@ -43,11 +46,13 @@ function generateMeme() {
   }
 }
 function drawMemeFromUrl(imageUrl) {
-  const img = new Image();
+  img = new Image();
   img.src = imageUrl;
   img.crossOrigin = "anonymous";
 
   img.onload = function () {
+    canvas.width = img.width;
+    canvas.height = img.height;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     drawText();
@@ -55,10 +60,7 @@ function drawMemeFromUrl(imageUrl) {
 }
 function drawText() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  const selectedTemplateUrl = templateSelect.value;
-  if (selectedTemplateUrl) {
-    drawMemeFromUrl(selectedTemplateUrl);
-  }
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
   ctx.font = "40px 'Lobster', Arial, sans-serif";
   ctx.fillStyle = "white";
   ctx.strokeStyle = "black";
