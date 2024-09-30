@@ -19,11 +19,9 @@ body {
     padding: 20px;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
 
 input {
@@ -34,9 +32,15 @@ input {
     border: 1px solid #ccc;
 }
 
-.meme-canvas #memeCanvas {
+.meme-canvas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#memeCanvas {
     border: 2px double black;
-    width: 25rem;
+    width: 100%;
     height: auto;
     margin: 20px 0;
 }
@@ -45,7 +49,7 @@ input {
     display: flex;
     padding: 3px;
     justify-content: center;
-    align-items: center;
+    width: 100%;
 }
 
 #generateBtn {
@@ -53,9 +57,7 @@ input {
     border-radius: 5px;
     box-sizing: border-box;
     color: #FFFFFF;
-    display: flex;
     font-size: 1rem;
-    justify-content: center;
     padding: 9px;
     text-decoration: none;
     border: 0;
@@ -81,24 +83,29 @@ input {
     margin-top: 0.5rem;
 }
 
-
 #download-btn:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 #tamplateSelect {
     padding: 3px;
+    width: 80%;
 }
 
-@media (max-width:786px) {
-    /* body {
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    } */
-
+@media (max-width: 786px) {
     .container {
         margin: 1rem;
+    }
+
+    .meme-canvas {
+        width: 100%;
+    }
+
+    #memeCanvas {
+        width: 100%;
+    }
+
+    #tamplateSelect {
+        margin-bottom: 5px;
     }
 }
