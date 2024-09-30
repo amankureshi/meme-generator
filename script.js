@@ -57,7 +57,7 @@ function drawText() {
   ctx.font = "40px Impact";
   ctx.fillStyle = "white";
   ctx.strokeStyle = "black";
-  ctx.lineWidth = 4;
+  ctx.lineWidth = 1;
   ctx.textAlign = "center";
 
   //Top-text

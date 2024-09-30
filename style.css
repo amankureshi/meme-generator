@@ -5,12 +5,26 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.container {
     min-height: 100vh;
     display: grid;
     place-items: center;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    min-height: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 .input-div {
@@ -21,16 +35,55 @@ body {
     padding: 5px;
 }
 
-.input-div input {
-    padding: 3px;
+input {
+    width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .meme-canvas #memeCanvas {
     border: 2px double black;
-    max-width: 20rem;
-    min-height: 20rem;
+    width: 25rem;
 }
 
 .tamplate-container {
     display: flex;
+    padding: 3px;
+}
+
+#generateBtn {
+    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    padding: 9px;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#generateBtn:hover {
+    background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+}
+
+#download-btn {
+    all: unset;
+    padding: 10px;
+    background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#download-btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
