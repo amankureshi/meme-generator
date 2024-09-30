@@ -12,10 +12,8 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    min-width: 300px;
     min-height: 450px;
-    margin: 0 auto;
-    padding: 20px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -23,8 +21,8 @@ body {
     display: grid;
     place-items: center;
     padding: 10px;
-    margin: 10px;
     border-radius: 10px;
+    gap: 1rem;
 }
 
 .input-div {
@@ -86,4 +84,10 @@ input {
 
 #download-btn:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+@media (max-width:786px) {
+    .container {
+        margin: 1rem;
+    }
 }

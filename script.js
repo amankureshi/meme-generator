@@ -54,7 +54,12 @@ function drawMemeFromUrl(imageUrl) {
   };
 }
 function drawText() {
-  ctx.font = "40px Impact";
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const selectedTemplateUrl = templateSelect.value;
+  if (selectedTemplateUrl) {
+    drawMemeFromUrl(selectedTemplateUrl);
+  }
+  ctx.font = "40px 'Lobster', Arial, sans-serif";
   ctx.fillStyle = "white";
   ctx.strokeStyle = "black";
   ctx.lineWidth = 1;
